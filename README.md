@@ -5,7 +5,7 @@ A basic banking system website made for The sparks foundation web design and dev
 <li>HTML</li>
 <li>CSS</li>
 <li>JavaScript</li>
-<br><br>
+<br>
 <h2>Back-end:</h2>
 <li>NodeJs</li>
 <li>Express</li>
