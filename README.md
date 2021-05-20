@@ -1,5 +1,5 @@
 # Banking-System
-A basic banking system website made for The sparks foundation web design and development internship.
+A basic banking system website made for The sparks foundation web design and development internship.This website provides some functionalities such as creating new users, transfering money among different users and also view the transaction history of all the transactions made.
 
 <h2>Front-end:</h2>
 <li>HTML</li>
