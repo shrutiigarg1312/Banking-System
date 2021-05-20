@@ -1,0 +1,49 @@
+.navitems #nav-history{
+    text-decoration: none;
+    border-bottom: 2px solid #F3D656;
+    border-radius: 5%;
+    color:#F3D656;
+}
+
+table {
+   border: 1px solid #3A3772;
+    margin:25px auto;
+    width: 70%;
+    border-collapse: collapse;
+    text-align: left;
+    overflow: hidden;
+  }
+  table td, table th {
+    border-top: 1px solid #3A3772;
+    padding: 10px;
+    text-align: center;
+  }
+    
+  table td {
+    border-left: 1px solid #3A3772;
+    border-right: 1px solid #3A3772;
+  }
+  table th {
+    background-color:#a6bcfe ;
+    
+  }
+
+  table tr:nth-of-type(even) td {
+    background-color: #c9daf3 ;
+  }
+  table tr:last-child{
+    border-bottom: 1px solid #3A3772;
+  }
+  #transfer-btn{
+    min-height: 20px;
+    width:90px;
+    background-color: #F3D656;
+    color:#3A3772;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border:none;
+    border-radius: 6px;
+}
+  
+

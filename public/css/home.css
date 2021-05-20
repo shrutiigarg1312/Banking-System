@@ -1,0 +1,41 @@
+
+.navitems #nav-home{
+    text-decoration: none;
+    border-bottom: 2px solid #F3D656;
+    border-radius: 5%;
+    color:#F3D656;
+}
+
+.homesection{
+    min-height: 80vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.greetings{
+    margin:40px;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width:30%;
+}
+
+.greetings h1{
+    font-size: 3.5rem;
+    padding-bottom: 10px;
+    font-weight: 700;
+    color:#3A3772;
+    border-bottom: 4px solid #3A3772;
+}
+.greetings p{
+    color:#3A3772;
+    margin: 20px 0px;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.homesection .img{
+    margin:40px;
+}
+.homesection img{
+    height:480px;
+}

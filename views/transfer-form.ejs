@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparks Foundation | Banking System</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/transfer-form.css">
+</head>
+<body>
+    <%- include("navbar") -%>
+
+
+    <div class="transferForm">
+        <div class="left">
+            <h1>Transfer Money</h1>
+            <p>Hey <strong><%= username %></strong> ! <br><br> Your current balance is Rs. <%= userbalance %>  </p>
+        </div>
+        <div class="right">
+            <form action="/transaction" method="POST">
+                <div class="form-input">
+                    <label for="name">From</label>
+                    <input type="text" id="from" name="from" value=<%= username %> >
+                </div>
+
+                <div class="form-input">
+                    <label for="to">To</label>
+                    <select name="to" id="to">
+                        <% allusers.forEach(function(user){%>
+                        <% if(user.name != username){ %> 
+                        <option value=<%= user.name %> > <%= user.name %> </option>
+                        <%}}) %>
+                      </select>
+                </div>
+                
+                <div class="form-input" >
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" name="amount" min=0 max=<%= userbalance %>>
+                </div>
+
+               <button type="submit" name="transfer-money" class="submit-btn" id="transfer-btn">Transfer</button>
+            
+            </form>
+        </div>
+    </div>
+
+    
+
+    <%- include("footer") -%>
+    
+</body>
+</html>

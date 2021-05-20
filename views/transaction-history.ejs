@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparks Foundation | Banking System</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/transaction-history.css">
+</head>
+
+<body>
+    <%- include("navbar") -%>
+
+        <table>
+            <thead>
+                <tr class="table-headers">
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Amount</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% transactions.forEach(function(i){%>
+                    
+                    <tr>
+                        <td>
+                            <%= i.from %>
+                        </td>
+                        <td>
+                            <%= i.to %>
+                        </td>
+                        <td>
+                            <%= i.amount %>
+                        </td>
+                        <td>
+                            <%= i.date %>
+                        </td>
+                    </tr>
+                    
+                    <% }) %>
+            </tbody>
+            </table>
+
+    <%- include("footer") -%>
+
+</body>
+
+</html>

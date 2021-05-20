@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparks Foundation | Banking System</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/transfer-money.css">
+</head>
+
+<body>
+    <%- include("navbar") -%>
+
+        <table>
+            <thead>
+                <tr class="table-headers">
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Balance</th>
+                    <th>Transfer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(function(i){%>
+                    
+                    <tr>
+                        <td>
+                            <%= i.name %>
+                        </td>
+                        <td>
+                            <%= i.email %>
+                        </td>
+                        <td>
+                            <%= i.gender %>
+                        </td>
+                        <td>
+                            <%= i.balance %>
+                        </td>
+                        <%let currentUser = JSON.stringify(i);%>
+                        <td>
+                            <form method="POST" action="/transferMoney"><button name="currentuser" value="<%= currentUser %>" id="transfer-btn">Transfer</button></form>
+                        </td>
+                    </tr>
+                    
+                    <% }) %>
+            </tbody>
+        </table>
+
+    <%- include("footer") -%>
+
+</body>
+
+</html>
